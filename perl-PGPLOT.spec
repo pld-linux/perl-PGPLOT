@@ -15,7 +15,7 @@ BuildRequires:	pgplot-devel
 BuildRequires:	perl-ExtUtils-F77 >= 1.11
 %requires_eq	perl
 Requires:	%{perl_sitearch}
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 PGPLOT - perl interface to the PGPLOT graphics library.
