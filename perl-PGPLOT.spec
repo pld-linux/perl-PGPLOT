@@ -3,6 +3,7 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
+%define	pdir	PGPLOT
 Summary:	PGPLOT perl module
 Summary(pl):	Modu³ perla PGPLOT
 Name:		perl-PGPLOT
@@ -11,7 +12,7 @@ Release:	5
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/PGPLOT/PGPLOT-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{version}.tar.gz
 # Source0-md5:	0c27c49f6443eb4fdcc9eaee4c756c87
 BuildRequires:	XFree86-devel
 BuildRequires:	gcc-g77
@@ -28,7 +29,7 @@ PGPLOT - perl interface to the PGPLOT graphics library.
 PGPLOT - interfejs perla do biblioteki graficznej PGPLOT.
 
 %prep
-%setup -q -n PGPLOT-%{version}
+%setup -q -n %{pdir}-%{version}
 
 %build
 %{__perl} Makefile.PL \
