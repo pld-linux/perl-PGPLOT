@@ -12,6 +12,7 @@ BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl >= 5.005_03-14
 BuildRequires:	XFree86-devel
 BuildRequires:	pgplot-devel
+BuildRequires:	perl-ExtUtils-F77 >= 1.11
 %requires_eq	perl
 Requires:	%{perl_sitearch}
 BuildRoot:	/tmp/%{name}-%{version}-root
