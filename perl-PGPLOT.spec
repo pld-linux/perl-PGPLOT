@@ -33,14 +33,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf CHANGES README HELP
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc CHANGES README HELP
 %{perl_sitearch}/PGPLOT.pm
 %dir %{perl_sitearch}/auto/PGPLOT
 %{perl_sitearch}/auto/PGPLOT/PGPLOT.bs
