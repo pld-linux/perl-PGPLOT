@@ -15,7 +15,7 @@ Source0:	http://www.cpan.org/modules/by-module/PGPLOT/PGPLOT-%{version}.tar.gz
 # Source0-md5:	0c27c49f6443eb4fdcc9eaee4c756c87
 BuildRequires:	XFree86-devel
 BuildRequires:	gcc-g77
-BuildRequires:	perl-devel >= 5.6
+BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	perl-ExtUtils-F77 >= 1.11
 BuildRequires:	pgplot-devel >= 5.2.2-1
 BuildRequires:	rpm-perlprov >= 4.1-13
