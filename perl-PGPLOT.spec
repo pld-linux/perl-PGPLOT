@@ -11,6 +11,7 @@ Release:	5
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/PGPLOT/PGPLOT-%{version}.tar.gz
+# Source0-md5:	0c27c49f6443eb4fdcc9eaee4c756c87
 BuildRequires:	XFree86-devel
 BuildRequires:	gcc-g77
 BuildRequires:	perl-devel >= 5.6
