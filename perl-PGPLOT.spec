@@ -3,11 +3,11 @@ Summary:	PGPLOT perl module
 Summary(pl):	Modu³ perla PGPLOT
 Name:		perl-PGPLOT
 Version:	2.18
-Release:	3
+Release:	4
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/PGPLOT/PGPLOT-%{version}.tar.gz
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	perl >= 5.6
 BuildRequires:	XFree86-devel
 BuildRequires:	pgplot-devel
@@ -25,7 +25,8 @@ PGPLOT - interfejs perla do biblioteki graficznej PGPLOT.
 %setup -q -n PGPLOT-%{version}
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make}
 
 %install
@@ -39,8 +40,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc CHANGES README HELP
-%{perl_sitearch}/PGPLOT.pm
-%dir %{perl_sitearch}/auto/PGPLOT
-%{perl_sitearch}/auto/PGPLOT/PGPLOT.bs
-%attr(755,root,root) %{perl_sitearch}/auto/PGPLOT/PGPLOT.so
+%{perl_vendorarch}/PGPLOT.pm
+%dir %{perl_vendorarch}/auto/PGPLOT
+%{perl_vendorarch}/auto/PGPLOT/PGPLOT.bs
+%attr(755,root,root) %{perl_vendorarch}/auto/PGPLOT/PGPLOT.so
 %{_mandir}/man3/*
