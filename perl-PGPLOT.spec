@@ -2,8 +2,8 @@
 Summary:	PGPLOT perl module
 Summary(pl):	Modu³ perla PGPLOT
 Name:		perl-PGPLOT
-Version:	2.15
-Release:	3
+Version:	2.17
+Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
