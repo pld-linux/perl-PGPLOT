@@ -8,7 +8,8 @@ Summary(pl):	Modu³ perla PGPLOT
 Name:		perl-PGPLOT
 Version:	2.18
 Release:	5
-License:	GPL
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/PGPLOT/PGPLOT-%{version}.tar.gz
 # Source0-md5:	0c27c49f6443eb4fdcc9eaee4c756c87
