@@ -29,22 +29,14 @@ PGPLOT - interfejs perla do biblioteki graficznej PGPLOT.
 
 %build
 perl Makefile.PL
-%{__make} OPTIMIZE="$RPM_OPT_FLAGS"
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
+
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-strip --strip-unneeded $RPM_BUILD_ROOT/%{perl_sitearch}/auto/PGPLOT/*.so
-
-(
-  cd $RPM_BUILD_ROOT%{perl_sitearch}/auto/PGPLOT
-  sed -e "s#$RPM_BUILD_ROOT##" .packlist >.packlist.new
-  mv .packlist.new .packlist
-)
-
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man3/* \
-        CHANGES README HELP
+gzip -9nf CHANGES README HELP
 
 %clean
 rm -rf $RPM_BUILD_ROOT
