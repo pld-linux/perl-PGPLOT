@@ -15,8 +15,6 @@ BuildRequires:	XFree86-devel
 BuildRequires:	pgplot-devel
 BuildRequires:	perl-ExtUtils-F77 >= 1.11
 BuildRequires:	gcc-g77
-%requires_eq	perl
-Requires:	%{perl_sitearch}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
