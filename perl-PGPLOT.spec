@@ -13,7 +13,7 @@ Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/PGPLOT/PGPLOT-%{version}.tar.gz
 BuildRequires:	XFree86-devel
 BuildRequires:	gcc-g77
-BuildRequires:	perl >= 5.6
+BuildRequires:	perl-devel >= 5.6
 BuildRequires:	perl-ExtUtils-F77 >= 1.11
 BuildRequires:	pgplot-devel >= 5.2.2-1
 BuildRequires:	rpm-perlprov >= 4.1-13
