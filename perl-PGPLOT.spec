@@ -31,7 +31,7 @@ PGPLOT - interfejs perla do biblioteki graficznej PGPLOT.
 
 %build
 %{__perl} Makefile.PL \
-	INSTALLDIRS=vendor 
+	INSTALLDIRS=vendor
 %{__make}
 
 %{!?_without_tests:echo /NULL | %{__make} test}
