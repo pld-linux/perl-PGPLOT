@@ -3,7 +3,7 @@ Summary:	PGPLOT perl module
 Summary(pl):	Modu³ perla PGPLOT
 Name:		perl-PGPLOT
 Version:	2.18
-Release:	2
+Release:	3
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/PGPLOT/PGPLOT-%{version}.tar.gz
