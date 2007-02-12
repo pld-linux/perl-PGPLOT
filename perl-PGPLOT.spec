@@ -5,7 +5,7 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	PGPLOT
 Summary:	PGPLOT perl module
-Summary(pl):	Modu≥ perla PGPLOT
+Summary(pl.UTF-8):   Modu≈Ç perla PGPLOT
 Name:		perl-PGPLOT
 Version:	2.18
 Release:	5
@@ -25,7 +25,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 PGPLOT - perl interface to the PGPLOT graphics library.
 
-%description -l pl
+%description -l pl.UTF-8
 PGPLOT - interfejs perla do biblioteki graficznej PGPLOT.
 
 %prep
