@@ -5,7 +5,7 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	PGPLOT
 Summary:	PGPLOT perl module
-Summary(pl.UTF-8):   Moduł perla PGPLOT
+Summary(pl.UTF-8):	Moduł perla PGPLOT
 Name:		perl-PGPLOT
 Version:	2.18
 Release:	5
