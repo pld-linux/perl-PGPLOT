@@ -12,14 +12,15 @@ Release:	6
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/PGPLOT/%{pdir}-%{version}.tar.gz
 # Source0-md5:	0c27c49f6443eb4fdcc9eaee4c756c87
-BuildRequires:	xorg-lib-libX11-devel
+URL:		http://search.cpan.org/dist/PGPLOT/
 BuildRequires:	gcc-g77
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	perl-ExtUtils-F77 >= 1.11
 BuildRequires:	pgplot-devel >= 5.2.2-1
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	xorg-lib-libX11-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
