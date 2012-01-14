@@ -7,13 +7,13 @@
 Summary:	PGPLOT perl module
 Summary(pl.UTF-8):	Moduł perla PGPLOT
 Name:		perl-PGPLOT
-Version:	2.20
-Release:	5
+Version:	2.21
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/PGPLOT/%{pdir}-%{version}.tar.gz
-# Source0-md5:	2843f43f2062f32a79aac9767203e0bb
+# Source0-md5:	836d8eb09bfcadd5d4edf668a551f17a
 URL:		http://search.cpan.org/dist/PGPLOT/
 BuildRequires:	gcc-g77
 BuildRequires:	perl-ExtUtils-F77 >= 1.13
