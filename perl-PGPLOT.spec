@@ -55,6 +55,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc CHANGES README HELP
 %{perl_vendorarch}/PGPLOT.pm
 %dir %{perl_vendorarch}/auto/PGPLOT
-%{perl_vendorarch}/auto/PGPLOT/PGPLOT.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/PGPLOT/PGPLOT.so
 %{_mandir}/man3/*
