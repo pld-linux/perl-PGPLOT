@@ -7,7 +7,7 @@ Summary:	PGPLOT Perl module
 Summary(pl.UTF-8):	Moduł Perla PGPLOT
 Name:		perl-PGPLOT
 Version:	2.29
-Release:	2
+Release:	3
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
