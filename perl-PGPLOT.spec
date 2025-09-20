@@ -6,19 +6,23 @@
 Summary:	PGPLOT Perl module
 Summary(pl.UTF-8):	Moduł Perla PGPLOT
 Name:		perl-PGPLOT
-Version:	2.29
-Release:	3
+Version:	2.35
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	https://www.cpan.org/modules/by-module/PGPLOT/%{pdir}-%{version}.tar.gz
-# Source0-md5:	eb7aa46a86485dfded60b24cf67eb886
+# Source0-md5:	8eabd2203522073fecb67b2b97e9bda3
 URL:		https://metacpan.org/dist/PGPLOT
 BuildRequires:	gcc-fortran
 BuildRequires:	libpng-devel
 BuildRequires:	perl-Devel-CheckLib >= 1.14
 BuildRequires:	perl-ExtUtils-F77 >= 1.13
-BuildRequires:	perl-devel >= 1:5.8.0
+BuildRequires:	perl-ExtUtils-MakeMaker
+BuildRequires:	perl-devel >= 1:5.10.1
+%if %{with tests}
+BuildRequires:	perl-Test-Simple >= 0.88
+%endif
 BuildRequires:	pgplot-devel >= 5.2.2-1
 BuildRequires:	pkgconfig
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -39,6 +43,7 @@ PGPLOT - interfejs perla do biblioteki graficznej PGPLOT.
 %build
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
+
 %{__make}
 
 %{?with_tests:echo /NULL | %{__make} test}
@@ -52,9 +57,11 @@ rm -rf $RPM_BUILD_ROOT
 # currently packaged in perl-PDL.spec
 %{__rm} $RPM_BUILD_ROOT%{perl_vendorarch}/PDL/Demos/PGPLOT*.pm
 %{__rm} -r $RPM_BUILD_ROOT%{perl_vendorarch}/PDL/Graphics/PGPLOT*
+%{__rm} -r $RPM_BUILD_ROOT%{perl_vendorarch}/PDL/Graphics/LUT*
+%{__rm} -r $RPM_BUILD_ROOT%{perl_vendorarch}/PDL/Graphics/State.pm
 %{__rm} $RPM_BUILD_ROOT%{_mandir}/man3/PDL::*.3pm
 
-rm -f $RPM_BUILD_ROOT%{perl_vendorarch}/auto/PGPLOT/.packlist
+%{__rm} $RPM_BUILD_ROOT%{perl_vendorarch}/auto/PGPLOT/.packlist
 
 %clean
 rm -rf $RPM_BUILD_ROOT
