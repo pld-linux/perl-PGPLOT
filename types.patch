@@ -1,0 +1,56 @@
+--- PGPLOT-2.35/pgfun.c.orig	2024-10-07 03:30:58.000000000 +0200
++++ PGPLOT-2.35/pgfun.c	2026-08-17 23:39:46.274091796 +0200
+@@ -26,14 +26,14 @@
+ /* Prototypes */
+ 
+ static SV*  pgfunname[2];
+-float pgfun1();
+-float pgfun2();
+-void   pgfunplot();
+-void PGFUNX(float fy(), int *n, float *xmin, float *xmax, int *pgflag);
+-void PGFUNY(float fx(), int *n, float *ymin, float *ymax, int *pgflag);
+-void PGFUNT(float fx(), float fy(), int *n, float *tmin, float *tmax, int *pgflag);
++float pgfun1(float*);
++float pgfun2(float*);
++void   pgfunplot(int *, float *, float *,float *);
++void PGFUNX(float fy(float*), int *n, float *xmin, float *xmax, int *pgflag);
++void PGFUNY(float fx(float*), int *n, float *ymin, float *ymax, int *pgflag);
++void PGFUNT(float fx(float*), float fy(float*), int *n, float *tmin, float *tmax, int *pgflag);
+ void PGCONX(float *a, int *idim, int *jdim, int *i1, int *i2, int *j1, int *j2,
+-            float *c, int *nc, void plot());
++            float *c, int *nc, void plot(int*, float*, float*, float*));
+ /* 
+ 
+ CPGPLOT prototypes missing in PGPLOT 5 - these handle passed
+@@ -44,19 +44,19 @@
+ */
+ 
+ 
+-void cpgfunx (float pgfun1(), int n, float xmin, float xmax, int pgflag) {
++void cpgfunx (float pgfun1(float*), int n, float xmin, float xmax, int pgflag) {
+ 
+    PGFUNX(pgfun1,&n,&xmin,&xmax,&pgflag);
+ }
+ 
+ 
+-void cpgfuny (float pgfun1(), int n, float ymin, float ymax, int pgflag) {
++void cpgfuny (float pgfun1(float*), int n, float ymin, float ymax, int pgflag) {
+ 
+    PGFUNY(pgfun1,&n,&ymin,&ymax,&pgflag);
+ }
+ 
+ 
+-void cpgfunt (float pgfun1(), float pgfun2(), int n, float tmin, float tmax,
++void cpgfunt (float pgfun1(float*), float pgfun2(float*), int n, float tmin, float tmax,
+          int pgflag) {
+ 
+   PGFUNT(pgfun1,pgfun2,&n,&tmin,&tmax,&pgflag);
+@@ -64,7 +64,7 @@
+ 
+ 
+ void cpgconx ( float* a, int idim, int jdim, int i1, int i2,
+-          int j1, int j2, float* c, int nc, void pgfunplot()) {
++          int j1, int j2, float* c, int nc, void pgfunplot(int*, float*, float*, float*)) {
+ 
+    PGCONX(a,&idim,&jdim,&i1,&i2,&j1,&j2,c,&nc,pgfunplot);
+ }

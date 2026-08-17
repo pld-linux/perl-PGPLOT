@@ -13,6 +13,7 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	https://www.cpan.org/modules/by-module/PGPLOT/%{pdir}-%{version}.tar.gz
 # Source0-md5:	8eabd2203522073fecb67b2b97e9bda3
+Patch0:		types.patch
 URL:		https://metacpan.org/dist/PGPLOT
 BuildRequires:	gcc-fortran
 BuildRequires:	libpng-devel
@@ -39,6 +40,7 @@ PGPLOT - interfejs perla do biblioteki graficznej PGPLOT.
 
 %prep
 %setup -q -n %{pdir}-%{version}
+%patch -P0 -p1
 
 %build
 %{__perl} Makefile.PL \
